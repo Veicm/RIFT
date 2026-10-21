@@ -16,8 +16,16 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rift.apps.core.views import register_students
+from django.shortcuts import render,redirect
+
+
+def redirect_to_register_students(request):
+    return redirect(register_students)
 
 urlpatterns = [
+    path('', redirect_to_register_students),
     path("admin/", admin.site.urls),
+    path("management/register_students/", register_students, name="register_students"),
 ]
