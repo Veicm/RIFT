@@ -172,6 +172,34 @@ main {
     transform: translateY(-50%);
 }
 
+.form-actions {
+    display: flex;
+    justify-content: center;
+    padding: 0 40px 34px;
+}
+
+.form-actions button {
+    min-height: 48px;
+    padding: 0 24px;
+    border: 0;
+    border-radius: 9px;
+    background: var(--blue);
+    color: var(--white);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 150ms ease, box-shadow 150ms ease;
+}
+
+.form-actions button:hover {
+    background: #004d70;
+}
+
+.form-actions button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 6px var(--blue-light);
+}
+
 @media (max-width: 600px) {
     header {
         padding: 42px 20px 78px;
@@ -184,6 +212,10 @@ main {
 
     .form-section {
         padding: 28px 22px 30px;
+    }
+
+    .form-actions {
+        padding: 0 22px 28px;
     }
 
     .field-grid {
