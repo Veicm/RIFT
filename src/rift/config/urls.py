@@ -17,7 +17,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from rift.apps.core.views import register_students
+from rift.apps.core.views.management import register_students
 from django.shortcuts import render,redirect
 
 
